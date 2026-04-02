@@ -20,13 +20,6 @@ Bedrock Chat ("the App") is an iOS application that allows users to interact wit
 - **Usage Statistics:** Token usage data stored locally for cost estimation (Pro feature)
 - **App Preferences:** Onboarding status and daily message count stored in UserDefaults
 
-### iCloud Sync (Pro Feature)
-If you enable iCloud sync (Pro subscription), your conversation data is synced via Apple's CloudKit service. This data is:
-- Encrypted in transit and at rest by Apple
-- Stored in your personal iCloud account
-- Subject to Apple's iCloud privacy policy
-- Deletable by you at any time through Settings > iCloud
-
 ## Third-Party Services
 
 ### AWS Bedrock
@@ -35,13 +28,10 @@ The App communicates directly with Amazon Web Services (AWS) Bedrock API using *
 ### Apple StoreKit
 In-app purchases are processed by Apple. We do not receive or store your payment information.
 
-### Apple CloudKit (Pro)
-iCloud sync uses Apple's CloudKit infrastructure. Data is managed under Apple's privacy policy.
-
 ## Data Security
 - AWS credentials are stored using iOS Keychain Services with `kSecAttrAccessibleWhenUnlockedThisDeviceOnly` protection
 - All network communication uses HTTPS (TLS 1.2+)
-- No data leaves your device except to AWS (using your credentials) and Apple (iCloud sync, if enabled)
+- No data leaves your device except to AWS (using your credentials) and Apple (for payment processing)
 
 ## Children's Privacy
 The App is not directed at children under 13. We do not knowingly collect information from children.
